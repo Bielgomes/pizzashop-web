@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:test": "vite --port 50789 --mode test",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "dependencies": {
     "@hookform/resolvers": "4.0.0",
@@ -38,7 +40,11 @@
     "zod": "3.24.2"
   },
   "devDependencies": {
+    "@playwright/test": "1.53.2",
     "@rocketseat/eslint-config": "2.2.2",
+    "@testing-library/jest-dom": "6.6.3",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
     "@types/node": "22.13.1",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
@@ -47,11 +53,19 @@
     "eslint": "8.57.1",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "globals": "15.14.0",
+    "happy-dom": "18.0.1",
+    "msw": "2.10.2",
     "postcss": "8.5.2",
     "prettier-plugin-tailwindcss": "0.6.11",
     "tailwindcss": "3.4.17",
     "typescript": "~5.7.2",
     "typescript-eslint": "8.22.0",
-    "vite": "6.1.0"
+    "vite": "6.1.0",
+    "vitest": "3.2.4"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

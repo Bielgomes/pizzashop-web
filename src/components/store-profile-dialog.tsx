@@ -52,7 +52,7 @@ export function StoreProfileDialog() {
         },
         onError(_, __, context) {
             if (context?.previousProfile) {
-                updateManagedRestaurantCache(context?.previousProfile)
+                updateManagedRestaurantCache(context.previousProfile)
             } 
         },
     })
